@@ -18,3 +18,6 @@ class TestBasics(unittest.TestCase):
     def test_exponentiation(self):
         result = rpn.calculate("4 2 ^")
         self.assertEqual(16, result)
+    def test_subtract2(self):
+        result = rpn.calculate("8 3 -")
+        self.assertEqual(5, result)
