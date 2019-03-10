@@ -1,5 +1,5 @@
 test:
-	python3 -m unittest --pep8 coveralls -v --cov coveralls --cov-report term-missing
+	coverage run -m unittest
 core:
 	python3 rpn.py
 .PHONY: test
