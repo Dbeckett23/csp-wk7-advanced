@@ -34,8 +34,16 @@ def calculate(myarg):
 
 def main():
     while True:
-        result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        try:
+            result = calculate(input("rpn calc> "))
+            print("Result: ", result)
+        except ValueError:
+            print("That was not a valid input. Please try again...")
+        except TypeError:
+            print("Too many parameters.")
+        except:
+            print("Something crazy happened. Closing the program.")
+            quit()
 
 
 if __name__ == '__main__':
