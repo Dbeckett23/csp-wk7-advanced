@@ -4,4 +4,4 @@ rvm:
 script: 
   - make test
 after_success:
-  - coveralls
+  - coveralls run unittest
