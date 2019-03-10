@@ -18,20 +18,25 @@ def calculate(myarg):
             token = int(token)
             stack.append(token)
         except ValueError:
-            function = operators[token]
+            try:
+                function = operators[token]
+            except LookupError:
+                print("Invalid operator given.")
+                return
             arg2 = stack.pop()
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
         print(stack)
     if len(stack) != 1:
-        raise TypeError("Too many parameters")
+        raise TypeError
     return stack.pop()
 
 def main():
     while True:
         result = calculate(input("rpn calc> "))
         print("Result: ", result)
+
 
 if __name__ == '__main__':
     main()
