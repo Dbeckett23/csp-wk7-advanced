@@ -51,9 +51,9 @@ def main():
             print("That was not a valid input. Please try again...")
         except TypeError:
             print("Too many parameters.")
-        #except:
-            #print("Something crazy happened. Closing the program.")
-         #   quit()
+        except:
+            print("Something crazy happened. Closing the program.")
+            quit()
 
 
 if __name__ == '__main__':
